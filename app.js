@@ -60,8 +60,41 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
+// call earlier functions
+sum(4, 7, 5);
+multiply(4, 7, 5);
 
+  // concatenate the strings
+  var sumString = a + ' and ' + b + ' and ' + c + ' sum to ' sumOfTwoNums + '.';
+
+  var productString = a + ' and ' + b + ' and ' + ' is ' + productOfTwoNums + '.';
+
+  // return an array
+  return [sumOfTwoNums, productOfTwoNums];
+
+
+  // return [sum[2], product, a + ' and ' + b + ' sum to ' + sum + ' .']
+  // return [sum[3], product, a + ' and ' + b + ' sum to ' + sum + ' .']
 }
+
+multiply(4, 7, 5);
+
+// Write your code here
+function multiply(a, b) { //eslint-disable-line
+  // multiply the numbers
+  var productOfTwoNums = a * b;
+  // concatenate the string
+  var productString = 'The product of ' + a + ' and ' + b + ' is ' + productOfTwoNums + '.';
+  // return an array
+  return [productOfTwoNums, productString];
+}
+
+multiply(5, 9);
+
+
+
+
+
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
 // testSumAndMultiply(4,7,5);
