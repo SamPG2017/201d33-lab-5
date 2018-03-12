@@ -7,7 +7,7 @@ Write a function called sum() that takes in two numbers as arguments and then re
 
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSum() function below and check the console to see if the test passes.*/
 
-// Write your code here
+// Write your code here 
 function sum(a, b) { //eslint-disable-line
   // add the numbers
   var sumOfTwoNums = a + b;
@@ -90,15 +90,33 @@ IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
 
 // Write your code here
-var testArray = [2, 3, 4]; //eslint-disable-line
+var testArray = [2, 3, 4];
+var i = 0;
 
 function sumArray(testArray) { //eslint-disable-line
 
-}
+  var cumuTotal = 0;
+  var cumuString = '';
+
+  for(i=0; i < testArray.length; i++) {
+    
+   cumuTotal = sum(cumuTotal, testArray[i])[0];
+   cumuString = cumuString + testArray[i] ;
+   
+   if (i < testArray.length - 1) {
+    cumuString = cumuString + ',';
+   }
+   
+   var arrayString = cumuString + ' was passed in as an array of numbers, and ' + cumuTotal + ' is their sum.';
+   }
+   
+  return[cumuTotal, arrayString];
+ }
+  sumArray(testArray)
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
