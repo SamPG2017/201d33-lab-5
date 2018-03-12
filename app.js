@@ -118,7 +118,6 @@ function sumArray(testArray) { //eslint-disable-line
 
 testSumArray(testArray);
 
-
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
@@ -132,11 +131,32 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
+var testArray = [2, 3, 4];
+var i = 0;
+
 function multiplyArray(testArray) { //eslint-disable-line
 
+var cumuTotalMult = 1;
+var cumuStringMult = '';
+
+for(i=0; i < testArray.length; i++) {
+
+cumuTotalMult = multiply(cumuTotalMult, testArray[i])[0];
+cumuStringMult = cumuStringMult + testArray[i] ;
+
+if (i < testArray.length - 1) {
+cumuStringMult = cumuStringMult + ',';
 }
 
+var arrayStringMult = 'The numbers ' + cumuStringMult + ' have a product of ' + cumuTotalMult + '.';
+ }
+
+ return[cumuTotalMult, arrayStringMult];
+
+}
+multiplyArray(testArray)
+
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
